@@ -1,0 +1,15 @@
+#prompt user to input money to buy a coke that totals at least 50 cents
+#if above 50 centa give back changecheck50 cs50/problems/2022/python/coke
+
+#going to loop until amount due is 0, when 0 calculate if $ is owed
+amount_due = 50
+#insert_coin = int(input('Insert coin: '))
+
+while amount_due > 0:
+    print('Amount due: ', amount_due)
+    insert_coin = int(input('Insert coin: '))
+    if insert_coin in [5, 10, 25]:
+        amount_due = int(amount_due - insert_coin)
+
+change_owed = abs(amount_due)
+print('Changed Owed:', change_owed)
